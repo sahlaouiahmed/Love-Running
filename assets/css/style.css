@@ -26,7 +26,8 @@ h3 {
     letter-spacing: 2px;
     color: #252525;
 }
-.hidden-heading{
+
+.hidden-heading {
     display: none;
 }
 
@@ -163,6 +164,7 @@ main {
     justify-content: center;
 }
 
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -202,6 +204,25 @@ main {
 #times h3 {
     /* Override the heading colour set in general styles */
     color: #fafafa;
+}
+
+/* Gallery page */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
+}
+
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -263,12 +284,22 @@ main {
         text-align: end;
         align-self: flex-end;
     }
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
 
@@ -298,5 +329,10 @@ main {
 
     #benefits-physical>div {
         align-self: flex-end;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
